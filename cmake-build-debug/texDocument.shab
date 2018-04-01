@@ -1,0 +1,80 @@
+﻿\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+\pagestyle{empty}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{cmap}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{units}
+\usepackage{fancyhdr}
+\usepackage{forloop}
+\usepackage{amssymb}
+
+\theoremstyle{definition}
+
+\newtheorem*{theorem}{Теорема}
+\newtheorem*{definition}{Определение}
+
+\renewcommand{\thesection}{\arabic{section}}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\fancyhead[RO]{\bfseries \rightmark}
+\fancyhead[LE]{\bfseries \rightmark}
+\fancyhead[R]{Взятие производной}
+%\fancyhead[LO, RE]{\today}
+\fancyfoot[R]{Группа 573. Плюснин Павел}
+%For multipage documents only!
+%\fancyfoot[L]{page: \thepage}
+%Uncomment this for 1-page sheets
+\fancyfoot[L]{Расчет погрешностей}
+\fancyfoot[C]{}
+
+
+\renewcommand{\baselinestretch}{1.0}
+\renewcommand\normalsize{\sloppypar}
+
+\setlength{\topmargin}{-0.5in}
+\setlength{\textheight}{9.1in}
+\setlength{\oddsidemargin}{-0.3in}
+\setlength{\evensidemargin}{-0.3in}
+\setlength{\textwidth}{7in}
+\setlength{\parindent}{0ex}
+\setlength{\parskip}{1ex}
+\pagestyle{fancy}
+
+\newcounter{problemset}
+\newcounter{example}
+\newcounter{totalpages}
+%Here you should set the total number of pages
+\setcounter{totalpages}{10}
+
+\def \topic { Расчет погрешности полученного результата }
+
+\def \diam {\mathrm{diam}\;}
+
+\def \R {\mathbb R}
+\def \E {\mathbb E}
+
+\begin{document}
+
+	 		\begin{center}
+
+	 			\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+	 			\HRule \\[0.2cm]
+	 			{ \Huge \bfseries \topic} %\\[0.2cm]
+	 			\HRule
+
+	 		\end{center}
+	 		\Large
+
+            Определим погрешность полученной величины\\
+	 		Для этого необходимо вычислить производную функции\\
+	 		Данная задача не является слишком сложной, но требует внимательности и аккуратности. Давайте рассмотрим процесс взятия производной.\\
+	 		{\LARGE \bfseries \center Математические преобразования: \\}

@@ -1,0 +1,120 @@
+\documentclass{article}
+% Uncomment the following line to allow the usage of graphics (.png, .jpg)
+%\usepackage[pdftex]{graphicx}
+% Comment the following line to NOT allow the usage of umlauts
+
+\pagestyle{empty}
+\usepackage[T2A]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[russian]{babel}
+\usepackage{cmap}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{units}
+\usepackage{fancyhdr}
+\usepackage{forloop}
+\usepackage{amssymb}
+
+\theoremstyle{definition}
+
+\newtheorem*{theorem}{Теорема}
+\newtheorem*{definition}{Определение}
+
+\renewcommand{\thesection}{\arabic{section}}
+
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0.4pt}
+
+\fancyhead[RO]{\bfseries \rightmark}
+\fancyhead[LE]{\bfseries \rightmark}
+\fancyhead[R]{Взятие производной}
+%\fancyhead[LO, RE]{\today}
+\fancyfoot[R]{Группа 573. Плюснин Павел}
+%For multipage documents only!
+%\fancyfoot[L]{page: \thepage}
+%Uncomment this for 1-page sheets
+\fancyfoot[L]{Расчет погрешностей}
+\fancyfoot[C]{}
+
+
+\renewcommand{\baselinestretch}{1.0}
+\renewcommand\normalsize{\sloppypar}
+
+\setlength{\topmargin}{-0.5in}
+\setlength{\textheight}{9.1in}
+\setlength{\oddsidemargin}{-0.3in}
+\setlength{\evensidemargin}{-0.3in}
+\setlength{\textwidth}{7in}
+\setlength{\parindent}{0ex}
+\setlength{\parskip}{1ex}
+\pagestyle{fancy}
+
+\newcounter{problemset}
+\newcounter{example}
+\newcounter{totalpages}
+%Here you should set the total number of pages
+\setcounter{totalpages}{10}
+
+\def \topic { Расчет погрешности полученного результата }
+
+\def \diam {\mathrm{diam}\;}
+
+\def \R {\mathbb R}
+\def \E {\mathbb E}
+
+\begin{document}
+
+	 		\begin{center}
+
+	 			\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+	 			\HRule \\[0.2cm]
+	 			{ \Huge \bfseries \topic} %\\[0.2cm]
+	 			\HRule
+
+	 		\end{center}
+	 		\Large
+
+            Определим погрешность полученной величины\\
+	 		Для этого необходимо вычислить производную функции\\
+	 		Данная задача не является слишком сложной, но требует внимательности и аккуратности. Давайте рассмотрим процесс взятия производной.\\
+	 		{\LARGE \bfseries \center Математические преобразования: \\}
+{\LARGE \bfseries \center Исходная формула: \\}\begin{center}$\frac{(x + 2y) ^ 2}{ \ln (x +  \sqrt {y})} = \frac{(12 + 2 \cdot 5.6) ^ 2}{ \ln (12 +  \sqrt {5.6})} = 201.974$\end{center}{\LARGE \bfseries \center Вычислим производную функции по переменной x \\}Вбивая в WolframAlpha, получаем производную
+\begin{center}$ \sqrt {y}$ \end{center}равную
+\begin{center}$(\frac{1}{2 \cdot ( \sqrt {y})}) \cdot 0$ \end{center}Преобразуя производную функции
+\begin{center}$x +  \sqrt {y}$ \end{center}получаем
+\begin{center}$1 + (\frac{1}{2 \cdot ( \sqrt {y})}) \cdot 0$ \end{center}Заметим, что производная фунцкции
+\begin{center}$ \ln (x +  \sqrt {y})$ \end{center}равна
+\begin{center}$(\frac{1}{x +  \sqrt {y}}) \cdot (1 + (\frac{1}{2 \cdot ( \sqrt {y})}) \cdot 0)$ \end{center}Легко заметить производную
+\begin{center}$2y$ \end{center}равную
+\begin{center}$0y + 2 \cdot 0$ \end{center}Преобразуя производную функции
+\begin{center}$x + 2y$ \end{center}получаем
+\begin{center}$1 + 0y + 2 \cdot 0$ \end{center}Опуская несложные выкладки, получим производную нижеуказанной функции,
+\begin{center}$ \ln (x + 2y)$ \end{center}равную
+\begin{center}$(\frac{1}{x + 2y}) \cdot (1 + 0y + 2 \cdot 0)$ \end{center}Заметим, что производная фунцкции
+\begin{center}$2 \cdot ( \ln (x + 2y))$ \end{center}равна
+\begin{center}$0 \cdot ( \ln (x + 2y)) + 2 \cdot ((\frac{1}{x + 2y}) \cdot (1 + 0y + 2 \cdot 0))$ \end{center}Легко заметить производную
+\begin{center}$(x + 2y) ^ 2$ \end{center}равную
+\begin{center}$((x + 2y) ^ 2) \cdot (0 \cdot ( \ln (x + 2y)) + 2 \cdot ((\frac{1}{x + 2y}) \cdot (1 + 0y + 2 \cdot 0)))$ \end{center}Очевидно, что производная
+\begin{center}$\frac{(x + 2y) ^ 2}{ \ln (x +  \sqrt {y})}$ \end{center}равна
+\begin{center}$\frac{(((x + 2y) ^ 2) \cdot (0 \cdot ( \ln (x + 2y)) + 2 \cdot ((\frac{1}{x + 2y}) \cdot (1 + 0y + 2 \cdot 0)))) \cdot ( \ln (x +  \sqrt {y})) - ((x + 2y) ^ 2) \cdot ((\frac{1}{x +  \sqrt {y}}) \cdot (1 + (\frac{1}{2 \cdot ( \sqrt {y})}) \cdot 0))}{( \ln (x +  \sqrt {y}))^ 2}$ \end{center}{\LARGE \bfseries \center Упростим полученную производную. \\}{\LARGE \bfseries \center Итак, производная функции равна \\}\begin{center}$\frac{d(\frac{(x + 2y) ^ 2}{ \ln (x +  \sqrt {y})})}{dx} = \frac{(((x + 2y) ^ 2) \cdot (2 \cdot (\frac{1}{x + 2y}))) \cdot ( \ln (x +  \sqrt {y})) - ((x + 2y) ^ 2) \cdot (\frac{1}{x +  \sqrt {y}})}{( \ln (x +  \sqrt {y}))^ 2}$ \end{center}{\LARGE \bfseries \center Вычислим конкретное значение по полученной формуле \\}\begin{center}$\frac{(((12 + 2 \cdot 5.6) ^ 2) \cdot (2 \cdot (\frac{1}{12 + 2 \cdot 5.6}))) \cdot ( \ln (12 +  \sqrt {5.6})) - ((12 + 2 \cdot 5.6) ^ 2) \cdot (\frac{1}{12 +  \sqrt {5.6}})}{( \ln (12 +  \sqrt {5.6}))^ 2} = 12.136$ \end{center}{\LARGE \bfseries \center Вычислим производную функции по переменной y \\}Совершенно ясно, что производная
+\begin{center}$ \sqrt {y}$ \end{center}равна
+\begin{center}$(\frac{1}{2 \cdot ( \sqrt {y})}) \cdot 1$ \end{center}Несложно заметить, что производная
+\begin{center}$x +  \sqrt {y}$ \end{center}равна
+\begin{center}$0 + (\frac{1}{2 \cdot ( \sqrt {y})}) \cdot 1$ \end{center}Нетрудно видеть, что производная
+\begin{center}$ \ln (x +  \sqrt {y})$ \end{center}равна
+\begin{center}$(\frac{1}{x +  \sqrt {y}}) \cdot (0 + (\frac{1}{2 \cdot ( \sqrt {y})}) \cdot 1)$ \end{center}Ясно, что производная этой функции
+\begin{center}$2y$ \end{center}равна
+\begin{center}$0y + 2 \cdot 1$ \end{center}Опуская несложные выкладки, получим производную нижеуказанной функции,
+\begin{center}$x + 2y$ \end{center}равную
+\begin{center}$0 + 0y + 2 \cdot 1$ \end{center}Опуская несложные выкладки, получим производную нижеуказанной функции,
+\begin{center}$ \ln (x + 2y)$ \end{center}равную
+\begin{center}$(\frac{1}{x + 2y}) \cdot (0 + 0y + 2 \cdot 1)$ \end{center}Опуская несложные выкладки, получим производную нижеуказанной функции,
+\begin{center}$2 \cdot ( \ln (x + 2y))$ \end{center}равную
+\begin{center}$0 \cdot ( \ln (x + 2y)) + 2 \cdot ((\frac{1}{x + 2y}) \cdot (0 + 0y + 2 \cdot 1))$ \end{center}Легко заметить производную
+\begin{center}$(x + 2y) ^ 2$ \end{center}равную
+\begin{center}$((x + 2y) ^ 2) \cdot (0 \cdot ( \ln (x + 2y)) + 2 \cdot ((\frac{1}{x + 2y}) \cdot (0 + 0y + 2 \cdot 1)))$ \end{center}Вбивая в WolframAlpha, получаем производную
+\begin{center}$\frac{(x + 2y) ^ 2}{ \ln (x +  \sqrt {y})}$ \end{center}равную
+\begin{center}$\frac{(((x + 2y) ^ 2) \cdot (0 \cdot ( \ln (x + 2y)) + 2 \cdot ((\frac{1}{x + 2y}) \cdot (0 + 0y + 2 \cdot 1)))) \cdot ( \ln (x +  \sqrt {y})) - ((x + 2y) ^ 2) \cdot ((\frac{1}{x +  \sqrt {y}}) \cdot (0 + (\frac{1}{2 \cdot ( \sqrt {y})}) \cdot 1))}{( \ln (x +  \sqrt {y}))^ 2}$ \end{center}{\LARGE \bfseries \center Упростим полученную производную. \\}{\LARGE \bfseries \center Итак, производная функции равна \\}\begin{center}$\frac{d(\frac{(x + 2y) ^ 2}{ \ln (x +  \sqrt {y})})}{dy} = \frac{(((x + 2y) ^ 2) \cdot (2 \cdot ((\frac{1}{x + 2y}) \cdot 2))) \cdot ( \ln (x +  \sqrt {y})) - ((x + 2y) ^ 2) \cdot ((\frac{1}{x +  \sqrt {y}}) \cdot (\frac{1}{2 \cdot ( \sqrt {y})}))}{( \ln (x +  \sqrt {y}))^ 2}$ \end{center}{\LARGE \bfseries \center Вычислим конкретное значение по полученной формуле \\}\begin{center}$\frac{(((12 + 2 \cdot 5.6) ^ 2) \cdot (2 \cdot ((\frac{1}{12 + 2 \cdot 5.6}) \cdot 2))) \cdot ( \ln (12 +  \sqrt {5.6})) - ((12 + 2 \cdot 5.6) ^ 2) \cdot ((\frac{1}{12 +  \sqrt {5.6}}) \cdot (\frac{1}{2 \cdot ( \sqrt {5.6})}))}{( \ln (12 +  \sqrt {5.6}))^ 2} = 33.7085$ \end{center}{\LARGE \bfseries \center Вычислим погрешность значения исходной формулы \\}\begin{center}$\Delta(\frac{(x + 2y) ^ 2}{ \ln (x +  \sqrt {y})}) = \sqrt{(\frac{d(\frac{(x + 2y) ^ 2}{ \ln (x +  \sqrt {y})})}{dx} \cdot \Delta(x)) ^ {2} + (\frac{d(\frac{(x + 2y) ^ 2}{ \ln (x +  \sqrt {y})})}{dy} \cdot \Delta(y)) ^ {2}} = \sqrt{(12.136 \cdot 1)^2 + (33.7085 \cdot 0.2)^2} = 13.8829$ \end{center}{\LARGE \bfseries \center Таким образом получаем, что \\}\begin{center}$\frac{(x + 2y) ^ 2}{ \ln (x +  \sqrt {y})} = 201.974 \pm (13.8829)$\end{center}{\large \bfseries \center Т.е полученная величина известна нам с ошикой в не более чем 6.87358\%\\}{\LARGE \bfseries \center Список использованной литературы:\\}1. Иванов Г.Е. Лекции по математическому анализу. Часть 1. (МФТИ - 2004г.)\\
+2. Фихтенгольц Г.М. Курс дифференциального и интегрального исчисления (Первое издание 1948 г.)\\
+{\LARGE \bfseries \center Спасибо за внимание!\\}
+\end{document}

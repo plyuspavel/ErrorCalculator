@@ -1,0 +1,3 @@
+C:/Users/plyus/ClionProjects/LabaKiller/cmake-build-debug/CMakeFiles/LabaKiller.dir
+C:/Users/plyus/ClionProjects/LabaKiller/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/plyus/ClionProjects/LabaKiller/cmake-build-debug/CMakeFiles/rebuild_cache.dir
